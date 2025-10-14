@@ -1,0 +1,52 @@
+import type { Metadata } from "next";
+import "@/styles/globals.css";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ConsentBanner } from "@/components/ConsentBanner";
+import { Inter, Merriweather } from "next/font/google";
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const merri = Merriweather({ subsets: ["latin"], weight: ["300", "400", "700"], variable: "--font-serif" });
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.drmassimilianoconte.com"),
+  title: {
+    default: "Dr. Massimiliano Conte | Cirugía Ortopédica y Medicina del Estilo de Vida",
+    template: "%s | Dr. Massimiliano Conte",
+  },
+  description:
+    "Cirugía Ortopédica y Traumatología. Medicina del estilo de vida. Atención integral y basada en evidencia.",
+  openGraph: {
+    type: "website",
+    title: "Dr. Massimiliano Conte",
+    description:
+      "Cirugía Ortopédica y Traumatología. Medicina del estilo de vida.",
+    url: "/",
+    siteName: "Dr. Massimiliano Conte",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Massimiliano Conte",
+    description:
+      "Cirugía Ortopédica y Traumatología. Medicina del estilo de vida.",
+  },
+  alternates: { canonical: "/" },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="es">
+      <body className={`${inter.variable} ${merri.variable}`}>
+        <Header />
+        {children}
+        <Footer />
+        <ConsentBanner />
+      </body>
+    </html>
+  );
+}
+
+

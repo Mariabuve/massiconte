@@ -1,0 +1,86 @@
+:root {
+  /* Refined medical palette with sophisticated colors */
+  --bg: #fafbfc; /* subtle warm white */
+  --panel: #ffffff;
+  --fg: #1a202c; /* deep charcoal */
+  --muted: #4a5568; /* refined gray */
+  --accent: #2c7a7b; /* sophisticated teal */
+  --accent-light: #e6fffa; /* soft teal background */
+  --accent-contrast: #ffffff;
+  --border: #e2e8f0;
+  --border-light: #f7fafc;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius: 16px;
+  --radius-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main { max-width: 1120px; padding: 48px 20px; margin: 0 auto; }
+@media (min-width: 768px) { main { padding: 64px 24px; } }
+
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-family: var(--font-serif); }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+label { display: block; margin: 12px 0 6px; }
+
+input, textarea {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--panel);
+}
+
+button {
+  margin-top: 1rem; padding: 10px 16px; border-radius: var(--radius);
+  border: 1px solid transparent; background: var(--accent);
+  color: var(--accent-contrast); cursor: pointer; transition: filter .15s ease;
+}
+button:hover { filter: brightness(0.95); }
+
+ul { padding-left: 1.25rem; }
+
+/* Layout helpers */
+.container { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.panel { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); }
+.shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+
+/* Simple responsive grid helper */
+.grid-1-2 { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 768px) { .grid-1-2 { grid-template-columns: 1fr 1fr; gap: 20px; } }
+
+/* Hero image sizing to show the full photo */
+.hero-img { position: relative; height: 280px; }
+@media (min-width: 768px) { .hero-img { height: 520px; } }
+
+
