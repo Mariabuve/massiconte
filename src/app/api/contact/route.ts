@@ -1,35 +1,93 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = "dr.conte.massimiliano@gmail.com";
 const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "no-reply@drmconte.site";
 
+// Simple in-memory rate limiter (per-IP, per 60s)
+const requestsByIp = new Map<string, { count: number; ts: number }>();
+const WINDOW_MS = 60_000;
+const MAX_REQUESTS = 5;
+
+function rateLimit(ip: string): boolean {
+  const now = Date.now();
+  const rec = requestsByIp.get(ip);
+  if (!rec || now - rec.ts > WINDOW_MS) {
+    requestsByIp.set(ip, { count: 1, ts: now });
+    return true;
+  }
+  if (rec.count >= MAX_REQUESTS) return false;
+  rec.count += 1;
+  return true;
+}
+
+function sanitize(input: string, max = 2000): string {
+  return input.replace(/[\u0000-\u001F\u007F]/g, "").slice(0, max).trim();
+}
+
+function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 export async function POST(request: Request) {
   try {
+    // Basic origin check (best-effort)
+    const referer = request.headers.get("referer") || "";
+    try {
+      if (referer) {
+        const url = new URL(referer);
+        const allowedHosts = new Set([
+          "localhost:3000",
+          "localhost:3001",
+          "www.drmassimilianoconte.com",
+          "drmassimilianoconte.com",
+        ]);
+        if (!allowedHosts.has(`${url.host}`)) {
+          return NextResponse.json({ error: "Origen no permitido" }, { status: 403 });
+        }
+      }
+    } catch {
+      // ignore malformed referer
+    }
+
+    // Rate limit by IP
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (!rateLimit(ip)) {
+      return NextResponse.json({ error: "Demasiadas solicitudes. Inténtelo más tarde." }, { status: 429 });
+    }
+
     const contentType = request.headers.get("content-type") || "";
     let name = "";
     let email = "";
     let message = "";
+    let honeypot = "";
 
     if (contentType.includes("application/json")) {
       const body = await request.json();
-      name = String(body.name || "").trim();
-      email = String(body.email || "").trim();
-      message = String(body.message || "").trim();
+      name = sanitize(String(body.name || ""), 200);
+      email = sanitize(String(body.email || ""), 320);
+      message = sanitize(String(body.message || ""));
+      honeypot = sanitize(String(body.website || ""), 64);
     } else {
       const form = await request.formData();
-      name = String(form.get("name") || "").trim();
-      email = String(form.get("email") || "").trim();
-      message = String(form.get("message") || "").trim();
+      name = sanitize(String(form.get("name") || ""), 200);
+      email = sanitize(String(form.get("email") || ""), 320);
+      message = sanitize(String(form.get("message") || ""));
+      honeypot = sanitize(String(form.get("website") || ""), 64);
     }
 
-    if (!name || !email || !message) {
+    // Honeypot traps simple bots
+    if (honeypot) {
+      return NextResponse.json({ ok: true });
+    }
+
+    if (!name || !email || !message || !isValidEmail(email)) {
       return NextResponse.json({ error: "Faltan campos obligatorios" }, { status: 400 });
     }
 
-    if (!process.env.RESEND_API_KEY) {
-      // In dev without API key, simulate success
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      // In dev without API key, simulate success without instantiating Resend
       return NextResponse.json({ ok: true, simulated: true });
     }
 
@@ -44,12 +102,13 @@ export async function POST(request: Request) {
       </div>
     `;
 
+    const resend = new Resend(apiKey);
     await resend.emails.send({
       from: FROM_EMAIL,
       to: TO_EMAIL,
       subject,
       html,
-      reply_to: email,
+      replyTo: email,
     });
 
     return NextResponse.json({ ok: true });

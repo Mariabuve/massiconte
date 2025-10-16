@@ -45,6 +45,10 @@ export default function ContactPage() {
           Mensaje*
           <textarea name="message" required aria-required="true" rows={5} />
         </label>
+        {/* Honeypot field (hidden from users) */}
+        <div style={{ position: "absolute", left: -99999, width: 1, height: 1, overflow: "hidden" }} aria-hidden>
+          <label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
+        </div>
         <label>
           <input type="checkbox" name="consent" required aria-required="true" />
           Acepto el tratamiento de mis datos para establecer contacto.*

@@ -4,30 +4,31 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { Inter, Merriweather } from "next/font/google";
+import { SEOJsonLd } from "@/components/SEOJsonLd";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const merri = Merriweather({ subsets: ["latin"], weight: ["300", "400", "700"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.drmassimilianoconte.com"),
   title: {
-    default: "Dr. Massimiliano Conte | Cirugía Ortopédica y Medicina del Estilo de Vida",
-    template: "%s | Dr. Massimiliano Conte",
+    default: "Traumatólogo en Mataró | Medicina del Estilo de Vida | Dr. Massimiliano Conte",
+    template: "%s | Traumatólogo | Dr. Massimiliano Conte",
   },
   description:
-    "Cirugía Ortopédica y Traumatología. Medicina del estilo de vida. Atención integral y basada en evidencia.",
+    "Traumatología + Medicina del Estilo de Vida: menos dolor, más movimiento y resultados sostenibles en Mataró.",
   openGraph: {
     type: "website",
-    title: "Dr. Massimiliano Conte",
+    title: "Traumatólogo en Mataró | Dr. Massimiliano Conte",
     description:
-      "Cirugía Ortopédica y Traumatología. Medicina del estilo de vida.",
+      "Traumatología y Medicina del Estilo de Vida para dolor, artrosis y lesiones deportivas.",
     url: "/",
     siteName: "Dr. Massimiliano Conte",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Massimiliano Conte",
+    title: "Traumatólogo en Mataró | Dr. Massimiliano Conte",
     description:
-      "Cirugía Ortopédica y Traumatología. Medicina del estilo de vida.",
+      "Traumatología + Medicina del Estilo de Vida: menos dolor y más movimiento.",
   },
   alternates: { canonical: "/" },
 };
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${inter.variable} ${merri.variable}`}>
         <Header />
+        <SEOJsonLd />
         {children}
         <Footer />
         <ConsentBanner />
