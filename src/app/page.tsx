@@ -243,7 +243,7 @@ export default function HomePage() {
             ¿Necesitas una valoración?
           </h2>
           <p style={{ fontSize: "1.1rem", lineHeight: 1.6, color: "var(--muted)", marginBottom: "var(--space-8)" }}>
-            Reserva tu evaluación (30–45 min): diagnóstico y plan inicial.
+            Reserva tu evaluación: diagnóstico y plan inicial.
           </p>
           <a href="mailto:dr.conte.massimiliano@gmail.com" style={{
             background: "linear-gradient(135deg, var(--accent) 0%, #38a169 100%)", 
