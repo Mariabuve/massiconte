@@ -11,19 +11,26 @@ export function Header() {
       background: "var(--panel)", zIndex: 50, backdropFilter: "saturate(180%) blur(8px)",
     }}>
       <nav className="container" style={{
-        padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr auto",
-        gap: "0.5rem", alignItems: "center",
+        padding: "10px 12px", display: "flex", 
+        justifyContent: "space-between", alignItems: "center",
+        gap: "0.5rem"
       }}>
-        <Link href="/" style={{ fontWeight: 800, letterSpacing: "-0.01em" }}>
+        <Link href="/" style={{ fontWeight: 800, letterSpacing: "-0.01em", fontSize: "clamp(14px, 4vw, 16px)" }}>
           Dr. Massimiliano Conte
         </Link>
-        <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", justifySelf: "end" }} aria-label="Navegación principal">
+        <div style={{ 
+          display: "flex", 
+          gap: "clamp(0.25rem, 2vw, 0.75rem)", 
+          alignItems: "center",
+          fontSize: "clamp(12px, 3.5vw, 14px)"
+        }} aria-label="Navegación principal">
           <Link href="/">Inicio</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contacto</Link>
           <div style={{ position: "relative" }}>
             <button onClick={() => setMoreOpen((v) => !v)} aria-expanded={moreOpen} aria-haspopup="menu" style={{
-              padding: "6px 10px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--panel)", cursor: "pointer"
+              padding: "4px 8px", borderRadius: 8, border: "1px solid var(--border)", 
+              background: "var(--panel)", cursor: "pointer", fontSize: "clamp(11px, 3vw, 13px)"
             }}>Más ▾</button>
             {moreOpen && (
               <div role="menu" style={{
