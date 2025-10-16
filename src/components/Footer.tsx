@@ -4,7 +4,7 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer style={{ borderTop: "1px solid var(--border)", marginTop: "4rem" }}>
-      <div className="container" style={{ padding: "20px" }}>
+      <div className="container" style={{ padding: "12px 0" }}>
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link href="/contact">Contacto</Link>

@@ -5,7 +5,7 @@ export default function HomePage() {
     <main>
       <section className="panel shadow-lg gradient-bg" style={{ padding: "0", overflow: "hidden" }}>
         <div className="grid-1-2" style={{ alignItems: "center" }}>
-          <div style={{ padding: "var(--space-12) var(--space-8)" }}>
+          <div style={{ padding: "var(--space-8) var(--space-4)" }}>
             <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", margin: 0, marginBottom: "var(--space-4)" }}>
               Dr. Massimiliano Conte
             </h1>
@@ -20,11 +20,11 @@ export default function HomePage() {
             <p style={{ color: "var(--muted)", maxWidth: 760, margin: "0 0 var(--space-6)", fontSize: "1.1rem", lineHeight: 1.6 }}>
               Recupera movilidad, reduce dolor y vuelve a lo que te gusta hacer.
             </p>
-            <div style={{ display: "flex", gap: "var(--space-4)", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: "var(--space-3)", flexWrap: "wrap" }}>
               <a href="mailto:dr.conte.massimiliano@gmail.com" style={{
                 background: "linear-gradient(135deg, var(--accent) 0%, #38a169 100%)", 
                 color: "var(--accent-contrast)",
-                padding: "12px 24px", 
+                padding: "10px 18px", 
                 borderRadius: "var(--radius)", 
                 border: "1px solid transparent",
                 textDecoration: "none",
@@ -34,7 +34,7 @@ export default function HomePage() {
               }}>Pedir cita</a>
               <a href="#evaluacion" style={{
                 border: "2px solid var(--accent)", 
-                padding: "12px 24px",
+                padding: "10px 18px",
                 borderRadius: "var(--radius)", 
                 color: "var(--accent)", 
                 background: "transparent",
