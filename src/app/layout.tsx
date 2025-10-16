@@ -11,16 +11,16 @@ const merri = Merriweather({ subsets: ["latin"], weight: ["300", "400", "700"], 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.drmassimilianoconte.com"),
   title: {
-    default: "Traumatólogo en Mataró | Medicina del Estilo de Vida | Dr. Massimiliano Conte",
+    default: "Traumatólogo en Mataró | Medicina del Estilo de Vida + Medicina Regenerativa | Dr. Massimiliano Conte",
     template: "%s | Traumatólogo | Dr. Massimiliano Conte",
   },
   description:
-    "Traumatología + Medicina del Estilo de Vida: menos dolor, más movimiento y resultados sostenibles en Mataró.",
+    "Traumatología + Medicina del Estilo de Vida + Medicina Regenerativa (PRP, ácido hialurónico, proloterapia): menos dolor, más movimiento y resultados sostenibles en Mataró.",
   openGraph: {
     type: "website",
     title: "Traumatólogo en Mataró | Dr. Massimiliano Conte",
     description:
-      "Traumatología y Medicina del Estilo de Vida para dolor, artrosis y lesiones deportivas.",
+      "Traumatología + Medicina del Estilo de Vida + Medicina Regenerativa (PRP, ácido hialurónico, proloterapia) para dolor, artrosis y lesiones deportivas.",
     url: "/",
     siteName: "Dr. Massimiliano Conte",
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Traumatólogo en Mataró | Dr. Massimiliano Conte",
     description:
-      "Traumatología + Medicina del Estilo de Vida: menos dolor y más movimiento.",
+      "Traumatología + Medicina del Estilo de Vida + Medicina Regenerativa: menos dolor y más movimiento.",
   },
   alternates: { canonical: "/" },
 };

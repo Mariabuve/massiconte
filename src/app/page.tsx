@@ -15,7 +15,7 @@ export default function HomePage() {
               marginBottom: "var(--space-4)",
               fontWeight: "600"
             }}>
-              Traumatología + Medicina del Estilo de Vida
+              Traumatología + Medicina del Estilo de Vida + Medicina Regenerativa
             </h2>
             <p style={{ color: "var(--muted)", maxWidth: 760, margin: "0 0 var(--space-6)", fontSize: "1.1rem", lineHeight: 1.6 }}>
               Recupera movilidad, reduce dolor y vuelve a lo que te gusta hacer.
@@ -61,10 +61,10 @@ export default function HomePage() {
       <section id="enfoque" style={{ marginTop: "var(--space-16)" }}>
         <div className="panel shadow" style={{ padding: "var(--space-12)", textAlign: "center" }}>
           <h2 className="text-gradient" style={{ fontSize: "2rem", marginBottom: "var(--space-6)" }}>
-            ¿Por qué combinar traumatología y Medicina del Estilo de Vida?
+            ¿Por qué combinar traumatología, Medicina del Estilo de Vida y Medicina Regenerativa?
           </h2>
           <p style={{ fontSize: "1.1rem", lineHeight: 1.7, color: "var(--muted)", maxWidth: 900, margin: "0 auto" }}>
-            La lesión y el dolor musculoesquelético no solo dependen de la cirugía o las infiltraciones. Factores como la alimentación, el movimiento, el sueño y el estrés influyen en la inflamación, la fuerza muscular, la regeneración del tejido y la adherencia al tratamiento. Mi enfoque integra la mejor evidencia clínica con intervenciones de estilo de vida para acelerar la recuperación y prevenir recaídas.
+            La lesión y el dolor musculoesquelético no solo dependen de la cirugía o las infiltraciones. Factores como la alimentación, el movimiento, el sueño y el estrés influyen en la inflamación, la fuerza muscular, la regeneración del tejido y la adherencia al tratamiento. Mi enfoque integra la mejor evidencia clínica con intervenciones de estilo de vida y terapias regenerativas avanzadas (PRP, ácido hialurónico, proloterapia) para acelerar la recuperación y prevenir recaídas.
           </p>
         </div>
       </section>
@@ -148,13 +148,71 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="medicina-regenerativa" style={{ marginTop: "var(--space-16)" }}>
+        <h2 className="text-gradient" style={{ fontSize: "2rem", marginBottom: "var(--space-8)", textAlign: "center" }}>
+          Medicina Regenerativa (SEMDOR)
+        </h2>
+        <div className="panel shadow" style={{ padding: "var(--space-12)", textAlign: "center", marginBottom: "var(--space-8)" }}>
+          <p style={{ fontSize: "1.2rem", lineHeight: 1.6, color: "var(--muted)", maxWidth: 800, margin: "0 auto var(--space-8)" }}>
+            Aplico PRP, ácido hialurónico y proloterapia en artrosis, tendinopatías y dolor vertebral (radiculopatía/hernia), y valoro terapias celulares y combinaciones en casos seleccionados y lesiones deportivas, siempre con indicación individualizada y basada en evidencia.
+          </p>
+        </div>
+        <div style={{ 
+          display: "grid", 
+          gap: "var(--space-6)", 
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", 
+          alignItems: "stretch" 
+        }}>
+          <div className="panel shadow" style={{ 
+            padding: "var(--space-8)", 
+            border: "1px solid var(--border-light)",
+            textAlign: "center"
+          }}>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>PRP (Plasma Rico en Plaquetas)</h3>
+            <p style={{ margin: 0, color: "var(--muted)" }}>
+              Concentrado de factores de crecimiento para acelerar la regeneración de tejidos lesionados.
+            </p>
+          </div>
+          <div className="panel shadow" style={{ 
+            padding: "var(--space-8)", 
+            border: "1px solid var(--border-light)",
+            textAlign: "center"
+          }}>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Ácido Hialurónico</h3>
+            <p style={{ margin: 0, color: "var(--muted)" }}>
+              Lubricación articular y protección del cartílago en artrosis y lesiones articulares.
+            </p>
+          </div>
+          <div className="panel shadow" style={{ 
+            padding: "var(--space-8)", 
+            border: "1px solid var(--border-light)",
+            textAlign: "center"
+          }}>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Proloterapia</h3>
+            <p style={{ margin: 0, color: "var(--muted)" }}>
+              Estimulación de la cicatrización natural en ligamentos y tendones lesionados.
+            </p>
+          </div>
+          <div className="panel shadow" style={{ 
+            padding: "var(--space-8)", 
+            border: "1px solid var(--border-light)",
+            textAlign: "center"
+          }}>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Terapias Celulares</h3>
+            <p style={{ margin: 0, color: "var(--muted)" }}>
+              Evaluación de tratamientos avanzados para casos seleccionados y lesiones deportivas.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="enfoque-detallado" style={{ marginTop: "var(--space-16)" }}>
         <div className="panel shadow" style={{ padding: "var(--space-12)", textAlign: "center" }}>
           <h2 className="text-gradient" style={{ fontSize: "2rem", marginBottom: "var(--space-4)" }}>
-            Enfoque: Traumatología + Estilo de Vida
+            Enfoque: Traumatología + Estilo de Vida + Medicina Regenerativa
           </h2>
           <p style={{ fontSize: "1.2rem", lineHeight: 1.6, color: "var(--muted)", maxWidth: 800, margin: "0 auto var(--space-8)" }}>
-            Menos dolor, más movimiento y mejores resultados sostenidos. Integramos la atención traumatológica con cambios terapéuticos en hábitos clave: ejercicio, nutrición, sueño y manejo del estrés.
+            Menos dolor, más movimiento y mejores resultados sostenidos. Integramos la atención traumatológica con cambios terapéuticos en hábitos clave: ejercicio, nutrición, sueño y manejo del estrés, complementados con terapias regenerativas avanzadas cuando están indicadas.
           </p>
         </div>
       </section>
