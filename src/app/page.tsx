@@ -164,7 +164,7 @@ export default function HomePage() {
           }}>
             <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Cross Bracing Protocol</h3>
             <p style={{ margin: 0, color: "var(--muted)" }}>
-              Tratamiento pionero e innovador del ligamento cruzado anterior en casos seleccionados.
+              Tratamiento pionero e innovador de la lesión del ligamento cruzado anterior en casos seleccionados.
             </p>
           </div>
           <div className="panel shadow" style={{ 
