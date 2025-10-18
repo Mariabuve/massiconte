@@ -28,7 +28,7 @@ export default function HomePage() {
               marginBottom: "var(--space-4)",
               boxShadow: "0 4px 12px rgba(44, 122, 123, 0.2)"
             }}>
-              🔬 Experto en Ecografía Musculoesquelética (Vinno 5)
+              Experto en Ecografía Musculoesquelética
             </div>
             <p style={{ color: "var(--muted)", maxWidth: 760, margin: "0 0 var(--space-6)", fontSize: "1.1rem", lineHeight: 1.6 }}>
               Recupera movilidad, reduce dolor y vuelve a lo que te gusta hacer.
@@ -153,9 +153,9 @@ export default function HomePage() {
             padding: "var(--space-8)", 
             border: "1px solid var(--border-light)"
           }}>
-            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>🔬 Ecografía Musculoesquelética</h3>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Ecografía Musculoesquelética</h3>
             <p style={{ margin: 0, color: "var(--muted)" }}>
-              Diagnóstico preciso con ecógrafo Vinno 5 para lesiones musculares, tendinosas y articulares.
+              Diagnóstico preciso para lesiones musculares, tendinosas y articulares.
             </p>
           </div>
           <div className="panel shadow" style={{ 
