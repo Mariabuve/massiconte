@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { SimpleLanguageSelector } from "./SimpleLanguageSelector";
+import { GoogleTranslate } from "./GoogleTranslate";
 
 export function Header() {
   const [moreOpen, setMoreOpen] = useState(false);
@@ -29,7 +29,7 @@ export function Header() {
           <Link href="/">Inicio</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contacto</Link>
-          <SimpleLanguageSelector />
+          <GoogleTranslate />
           <div style={{ position: "relative" }}>
             <button onClick={() => setMoreOpen((v) => !v)} aria-expanded={moreOpen} aria-haspopup="menu" style={{
               padding: "4px 8px", borderRadius: 8, border: "1px solid var(--border)", 
