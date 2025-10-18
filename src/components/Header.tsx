@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { LanguageSelector } from "./LanguageSelector";
 
 export function Header() {
   const [moreOpen, setMoreOpen] = useState(false);
@@ -22,11 +23,13 @@ export function Header() {
           display: "flex", 
           gap: "clamp(0.25rem, 2vw, 0.75rem)", 
           alignItems: "center",
-          fontSize: "clamp(12px, 3.5vw, 14px)"
+          fontSize: "clamp(12px, 3.5vw, 14px)",
+          flexWrap: "wrap"
         }} aria-label="Navegación principal">
           <Link href="/">Inicio</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contacto</Link>
+          <LanguageSelector />
           <div style={{ position: "relative" }}>
             <button onClick={() => setMoreOpen((v) => !v)} aria-expanded={moreOpen} aria-haspopup="menu" style={{
               padding: "4px 8px", borderRadius: 8, border: "1px solid var(--border)", 
