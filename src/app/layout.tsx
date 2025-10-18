@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     template: "%s | Traumatólogo | Dr. Massimiliano Conte",
   },
   description:
-    "Traumatología • Medicina del Estilo de Vida • Medicina Regenerativa (PRP, ácido hialurónico, proloterapia): menos dolor, más movimiento y resultados sostenibles en Mataró.",
+    "Traumatología • Medicina del Estilo de Vida • Medicina Regenerativa (PRP, ácido hialurónico): menos dolor, más movimiento y resultados sostenibles en Mataró.",
   openGraph: {
     type: "website",
     title: "Traumatólogo en Mataró | Dr. Massimiliano Conte",
     description:
-      "Traumatología • Medicina del Estilo de Vida • Medicina Regenerativa (PRP, ácido hialurónico, proloterapia) para dolor, artrosis y lesiones deportivas.",
+      "Traumatología • Medicina del Estilo de Vida • Medicina Regenerativa (PRP, ácido hialurónico) para dolor, artrosis y lesiones deportivas.",
     url: "/",
     siteName: "Dr. Massimiliano Conte",
   },

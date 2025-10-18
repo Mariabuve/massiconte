@@ -77,7 +77,7 @@ export default function HomePage() {
             ¿Por qué combinar Traumatología, Medicina del Estilo de Vida y Medicina Regenerativa?
           </h2>
           <p style={{ fontSize: "1.1rem", lineHeight: 1.7, color: "var(--muted)", maxWidth: 900, margin: "0 auto" }}>
-            La lesión y el dolor musculoesquelético no solo dependen de la cirugía o las infiltraciones. Factores como la alimentación, el movimiento, el sueño y el estrés influyen en la inflamación, la fuerza muscular, la regeneración del tejido y la adherencia al tratamiento. Mi enfoque integra la mejor evidencia clínica con intervenciones de estilo de vida y terapias regenerativas avanzadas (PRP, ácido hialurónico, proloterapia) para acelerar la recuperación y prevenir recaídas.
+            La lesión y el dolor musculoesquelético no solo dependen de la cirugía o las infiltraciones. Factores como la alimentación, el movimiento, el sueño y el estrés influyen en la inflamación, la fuerza muscular, la regeneración del tejido y la adherencia al tratamiento. Mi enfoque integra la mejor evidencia clínica con intervenciones de estilo de vida y terapias regenerativas avanzadas (PRP, ácido hialurónico) para acelerar la recuperación y prevenir recaídas.
           </p>
         </div>
       </section>
