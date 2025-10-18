@@ -17,6 +17,19 @@ export default function HomePage() {
             }}>
               Traumatología • Medicina del Estilo de Vida • Medicina Regenerativa
             </h2>
+            <div style={{ 
+              background: "linear-gradient(135deg, var(--accent) 0%, #38a169 100%)", 
+              color: "white",
+              padding: "8px 16px", 
+              borderRadius: "20px", 
+              fontSize: "0.9rem",
+              fontWeight: "500",
+              display: "inline-block",
+              marginBottom: "var(--space-4)",
+              boxShadow: "0 4px 12px rgba(44, 122, 123, 0.2)"
+            }}>
+              🔬 Experto en Ecografía Musculoesquelética (Vinno 5)
+            </div>
             <p style={{ color: "var(--muted)", maxWidth: 760, margin: "0 0 var(--space-6)", fontSize: "1.1rem", lineHeight: 1.6 }}>
               Recupera movilidad, reduce dolor y vuelve a lo que te gusta hacer.
             </p>
@@ -70,9 +83,12 @@ export default function HomePage() {
       </section>
 
       <section id="ayuda" style={{ marginTop: "var(--space-16)" }}>
-        <h2 className="text-gradient" style={{ fontSize: "2rem", marginBottom: "var(--space-8)", textAlign: "center" }}>
+        <h2 className="text-gradient" style={{ fontSize: "2rem", marginBottom: "var(--space-4)", textAlign: "center" }}>
           En qué te puedo ayudar
         </h2>
+        <p style={{ textAlign: "center", color: "var(--muted)", marginBottom: "var(--space-8)", fontSize: "1.1rem" }}>
+          Algunos ejemplos de las condiciones que trato (entre otras):
+        </p>
         <div style={{ 
           display: "grid", 
           gap: "var(--space-6)", 
@@ -133,6 +149,33 @@ export default function HomePage() {
               Alivia carga y mejora capacidad funcional.
             </p>
           </div>
+          <div className="panel shadow" style={{ 
+            padding: "var(--space-8)", 
+            border: "1px solid var(--border-light)"
+          }}>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>🔬 Ecografía Musculoesquelética</h3>
+            <p style={{ margin: 0, color: "var(--muted)" }}>
+              Diagnóstico preciso con ecógrafo Vinno 5 para lesiones musculares, tendinosas y articulares.
+            </p>
+          </div>
+          <div className="panel shadow" style={{ 
+            padding: "var(--space-8)", 
+            border: "1px solid var(--border-light)"
+          }}>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Cross Bracing Protocol</h3>
+            <p style={{ margin: 0, color: "var(--muted)" }}>
+              Tratamiento conservador del ligamento cruzado anterior en casos seleccionados.
+            </p>
+          </div>
+          <div className="panel shadow" style={{ 
+            padding: "var(--space-8)", 
+            border: "1px solid var(--border-light)"
+          }}>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Cirugía Ligamento Cruzado</h3>
+            <p style={{ margin: 0, color: "var(--muted)" }}>
+              Cirugía de LCA cuando no es candidato para tratamiento conservador.
+            </p>
+          </div>
         </div>
         <div style={{ textAlign: "center", marginTop: "var(--space-8)" }}>
           <a href="#enfoque-detallado" style={{
@@ -154,7 +197,7 @@ export default function HomePage() {
         </h2>
         <div className="panel shadow" style={{ padding: "var(--space-12)", textAlign: "center", marginBottom: "var(--space-8)" }}>
           <p style={{ fontSize: "1.2rem", lineHeight: 1.6, color: "var(--muted)", maxWidth: 800, margin: "0 auto var(--space-8)" }}>
-            Terapias avanzadas como PRP, ácido hialurónico y proloterapia para artrosis, tendinopatías y lesiones deportivas, con indicación individualizada basada en evidencia científica.
+            Terapias avanzadas como PRP, ácido hialurónico, etc. para artrosis, tendinopatías y lesiones deportivas, con indicación individualizada basada en evidencia científica.
           </p>
         </div>
         <div style={{ 
@@ -181,16 +224,6 @@ export default function HomePage() {
             <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Ácido Hialurónico</h3>
             <p style={{ margin: 0, color: "var(--muted)" }}>
               Lubricación articular y protección del cartílago en artrosis y lesiones articulares.
-            </p>
-          </div>
-          <div className="panel shadow" style={{ 
-            padding: "var(--space-8)", 
-            border: "1px solid var(--border-light)",
-            textAlign: "center"
-          }}>
-            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Proloterapia</h3>
-            <p style={{ margin: 0, color: "var(--muted)" }}>
-              Estimulación de la cicatrización natural en ligamentos y tendones lesionados.
             </p>
           </div>
           <div className="panel shadow" style={{ 

@@ -10,68 +10,68 @@ export function TabbedInfo() {
   return (
     <section id="enfoque-y-resultados" style={{ marginTop: "var(--space-16)" }}>
       <h2 className="text-gradient" style={{ fontSize: "2rem", marginBottom: "var(--space-6)", textAlign: "center" }}>
-        Enfoque, resultados y para quién
+        Mi enfoque integral
       </h2>
 
-      <div className="panel shadow" style={{ padding: "var(--space-6)" }}>
-        <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "nowrap", overflowX: "auto", paddingBottom: 6 }}>
+      <div className="panel shadow" style={{ padding: "var(--space-8)" }}>
+        <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", paddingBottom: 6 }}>
           <button onClick={() => setTab("incluye")} aria-pressed={tab === "incluye"}
             style={{
-              padding: "10px 16px",
+              padding: "12px 20px",
               borderRadius: "var(--radius)",
               border: tab === "incluye" ? "2px solid var(--accent)" : "1px solid var(--border)",
               background: tab === "incluye" ? "var(--accent-light)" : "var(--panel)",
               color: "var(--fg)",
-              whiteSpace: "nowrap"
-            }}>Qué incluye</button>
+              whiteSpace: "nowrap",
+              fontWeight: tab === "incluye" ? "600" : "400"
+            }}>Mi proceso</button>
           <button onClick={() => setTab("beneficios")} aria-pressed={tab === "beneficios"}
             style={{
-              padding: "10px 16px",
+              padding: "12px 20px",
               borderRadius: "var(--radius)",
               border: tab === "beneficios" ? "2px solid var(--accent)" : "1px solid var(--border)",
               background: tab === "beneficios" ? "var(--accent-light)" : "var(--panel)",
               color: "var(--fg)",
-              whiteSpace: "nowrap"
-            }}>Qué se consigue</button>
+              whiteSpace: "nowrap",
+              fontWeight: tab === "beneficios" ? "600" : "400"
+            }}>Resultados</button>
           <button onClick={() => setTab("paraQuien")} aria-pressed={tab === "paraQuien"}
             style={{
-              padding: "10px 16px",
+              padding: "12px 20px",
               borderRadius: "var(--radius)",
               border: tab === "paraQuien" ? "2px solid var(--accent)" : "1px solid var(--border)",
               background: tab === "paraQuien" ? "var(--accent-light)" : "var(--panel)",
               color: "var(--fg)",
-              whiteSpace: "nowrap"
+              whiteSpace: "nowrap",
+              fontWeight: tab === "paraQuien" ? "600" : "400"
             }}>Para quién</button>
         </div>
 
-        <div style={{ marginTop: "var(--space-6)" }}>
+        <div style={{ marginTop: "var(--space-8)" }}>
           {tab === "incluye" && (
-            <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
-              <Card title="Evaluación 360º" text="Historia clínica traumatológica, pruebas disponibles y análisis de hábitos (actividad física, alimentación, descanso, estrés)." />
-              <Card title="Objetivos claros" text="Definimos metas realistas (dolor, función, retorno a actividad) y medibles." />
-              <Card title="Plan personalizado" text="Ejercicio terapéutico, nutrición orientada a tejido, higiene del sueño y estrategias de estrés." />
-              <Card title="Acompañamiento y ajustes" text="Revisiones periódicas con métricas funcionales para adaptar el plan." />
-              <Card title="Prevención de recaídas" text="Educación del dolor, pautas de mantenimiento y retorno seguro a la actividad." />
+            <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
+              <Card title="🔍 Evaluación integral" text="Historia clínica completa, análisis de hábitos (nutrición, ejercicio, sueño, estrés) y pruebas complementarias cuando sea necesario." />
+              <Card title="🎯 Plan personalizado" text="Ejercicio terapéutico específico, nutrición antiinflamatoria, suplementación dirigida y estrategias de recuperación." />
+              <Card title="💊 Soporte nutricional" text="Nutrición orientada a la regeneración tisular, control de inflamación y suplementación basada en evidencia." />
+              <Card title="📊 Seguimiento activo" text="Revisiones periódicas con métricas funcionales, ajustes del plan y educación continua." />
             </div>
           )}
 
           {tab === "beneficios" && (
-            <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
-              <Card title="Menos dolor" text="Reducción del dolor y de la inflamación percibida." />
-              <Card title="Más función" text="Subir/bajar escaleras, caminar, entrenar, trabajar." />
-              <Card title="Recuperación rápida" text="Tras lesión o cirugía de forma segura." />
-              <Card title="Más energía" text="Mejor sueño, clave para mantener resultados." />
-              <Card title="Resultados sostenibles" text="Hábitos practicables en tu día a día." />
+            <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
+              <Card title="⚡ Menos dolor, más función" text="Reducción significativa del dolor y mejora de la capacidad funcional en actividades diarias y deportivas." />
+              <Card title="🏃‍♂️ Recuperación acelerada" text="Regeneración tisular optimizada con nutrición específica y ejercicio terapéutico dosificado." />
+              <Card title="💪 Fortaleza sostenible" text="Mejora de la fuerza muscular, densidad ósea y capacidad de recuperación a largo plazo." />
+              <Card title="🛡️ Prevención de recaídas" text="Educación del dolor, hábitos saludables y herramientas para mantener los resultados." />
             </div>
           )}
 
           {tab === "paraQuien" && (
-            <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
-              <Card title="Dolor crónico" text="Artrosis, lumbalgia, cervicalgia y dolor musculoesquelético crónico." />
-              <Card title="Lesiones deportivas" text="Sobrecargas y retorno al deporte con seguridad." />
-              <Card title="Pre y posquirúrgico" text="Preparación y recuperación posquirúrgica." />
-              <Card title="Mejorar función" text="Evitar recaídas con un enfoque activo y progresivo." />
-              <Card title="Prevención" text="Optimizar tu salud musculoesquelética sin patología actual." />
+            <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
+              <Card title="🏥 Dolor crónico" text="Artrosis, lumbalgia, cervicalgia y dolor musculoesquelético persistente que afecta la calidad de vida." />
+              <Card title="🏃‍♂️ Lesiones deportivas" text="Tendinopatías, esguinces, roturas musculares y retorno seguro al deporte con protocolos específicos." />
+              <Card title="🔬 Casos complejos" text="Pacientes que requieren enfoque multidisciplinar con ecografía, medicina regenerativa y cirugía cuando sea necesario." />
+              <Card title="🎯 Optimización" text="Deportistas y personas activas que buscan prevenir lesiones y maximizar su rendimiento." />
             </div>
           )}
         </div>
