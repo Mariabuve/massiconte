@@ -332,38 +332,9 @@ export default function HomePage() {
             <p style={{ color: "var(--muted)", marginBottom: "var(--space-2)" }}>
               T. 937 98 04 40
             </p>
-            <p style={{ color: "var(--muted)", marginBottom: "var(--space-2)" }}>
+            <p style={{ color: "var(--muted)", margin: 0 }}>
               info@cmae.es
             </p>
-            <div style={{ marginTop: "var(--space-4)", padding: "var(--space-4)", background: "var(--accent-light)", borderRadius: "var(--radius)", border: "1px solid var(--accent)" }}>
-              <p style={{ color: "var(--accent)", fontWeight: "600", margin: "0 0 var(--space-2)", fontSize: "0.9rem" }}>
-                📱 App Creu Groga
-              </p>
-              <p style={{ color: "var(--muted)", margin: "0 0 var(--space-3)", fontSize: "0.85rem" }}>
-                Descarga la app oficial de Creu Groga para pedir cita de forma rápida y cómoda.
-              </p>
-              <a href="https://play.google.com/store/apps/details?id=com.creugroga.app" target="_blank" rel="noopener noreferrer" style={{
-                display: "inline-block",
-                background: "var(--accent)",
-                color: "white",
-                padding: "6px 12px",
-                borderRadius: "6px",
-                textDecoration: "none",
-                fontSize: "0.8rem",
-                fontWeight: "500",
-                marginRight: "var(--space-2)"
-              }}>Android</a>
-              <a href="https://apps.apple.com/app/creu-groga/id1234567890" target="_blank" rel="noopener noreferrer" style={{
-                display: "inline-block",
-                background: "var(--accent)",
-                color: "white",
-                padding: "6px 12px",
-                borderRadius: "6px",
-                textDecoration: "none",
-                fontSize: "0.8rem",
-                fontWeight: "500"
-              }}>iOS</a>
-            </div>
           </div>
         </div>
       </section>
