@@ -50,28 +50,28 @@ export function TabbedInfo() {
         <div style={{ marginTop: "var(--space-8)" }}>
           {tab === "incluye" && (
             <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
-              <Card title="🔍 Evaluación integral" text="Historia clínica completa, análisis de hábitos (nutrición, ejercicio, sueño, estrés) y pruebas complementarias cuando sea necesario." />
-              <Card title="🎯 Plan personalizado" text="Ejercicio terapéutico específico, nutrición antiinflamatoria, suplementación dirigida y estrategias de recuperación." />
-              <Card title="💊 Soporte nutricional" text="Nutrición orientada a la regeneración tisular, control de inflamación y suplementación basada en evidencia." />
-              <Card title="📊 Seguimiento activo" text="Revisiones periódicas con métricas funcionales, ajustes del plan y educación continua." />
+              <Card title="Evaluación integral" text="Historia clínica completa, análisis de hábitos (nutrición, ejercicio, sueño, estrés) y pruebas complementarias cuando sea necesario." />
+              <Card title="Plan personalizado" text="Ejercicio terapéutico específico, nutrición antiinflamatoria, suplementación dirigida y estrategias de recuperación." />
+              <Card title="Soporte nutricional" text="Nutrición orientada a la regeneración tisular, control de inflamación y suplementación basada en evidencia." />
+              <Card title="Seguimiento activo" text="Revisiones periódicas con métricas funcionales, ajustes del plan y educación continua." />
             </div>
           )}
 
           {tab === "beneficios" && (
             <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
-              <Card title="⚡ Menos dolor, más función" text="Reducción significativa del dolor y mejora de la capacidad funcional en actividades diarias y deportivas." />
-              <Card title="🏃‍♂️ Recuperación acelerada" text="Regeneración tisular optimizada con nutrición específica y ejercicio terapéutico dosificado." />
-              <Card title="💪 Fortaleza sostenible" text="Mejora de la fuerza muscular, densidad ósea y capacidad de recuperación a largo plazo." />
-              <Card title="🛡️ Prevención de recaídas" text="Educación del dolor, hábitos saludables y herramientas para mantener los resultados." />
+              <Card title="Menos dolor, más función" text="Reducción significativa del dolor y mejora de la capacidad funcional en actividades diarias y deportivas." />
+              <Card title="Recuperación acelerada" text="Regeneración tisular optimizada con nutrición específica y ejercicio terapéutico dosificado." />
+              <Card title="Fortaleza sostenible" text="Mejora de la fuerza muscular, densidad ósea y capacidad de recuperación a largo plazo." />
+              <Card title="Prevención de recaídas" text="Educación del dolor, hábitos saludables y herramientas para mantener los resultados." />
             </div>
           )}
 
           {tab === "paraQuien" && (
             <div style={{ display: "grid", gap: "var(--space-6)", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
-              <Card title="🏥 Dolor crónico" text="Artrosis, lumbalgia, cervicalgia y dolor musculoesquelético persistente que afecta la calidad de vida." />
-              <Card title="🏃‍♂️ Lesiones deportivas" text="Tendinopatías, esguinces, roturas musculares y retorno seguro al deporte con protocolos específicos." />
-              <Card title="🔬 Casos complejos" text="Pacientes que requieren enfoque multidisciplinar con ecografía, medicina regenerativa y cirugía cuando sea necesario." />
-              <Card title="🎯 Optimización" text="Deportistas y personas activas que buscan prevenir lesiones y maximizar su rendimiento." />
+              <Card title="Dolor crónico" text="Artrosis, lumbalgia, cervicalgia y dolor musculoesquelético persistente que afecta la calidad de vida." />
+              <Card title="Lesiones deportivas" text="Tendinopatías, esguinces, roturas musculares y retorno seguro al deporte con protocolos específicos." />
+              <Card title="Casos complejos" text="Pacientes que requieren enfoque multidisciplinar con ecografía, medicina regenerativa y cirugía cuando sea necesario." />
+              <Card title="Optimización" text="Deportistas y personas activas que buscan prevenir lesiones y maximizar su rendimiento." />
             </div>
           )}
         </div>

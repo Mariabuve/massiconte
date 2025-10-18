@@ -155,7 +155,7 @@ export default function HomePage() {
           }}>
             <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Ecografía Musculoesquelética</h3>
             <p style={{ margin: 0, color: "var(--muted)" }}>
-              Diagnóstico preciso para lesiones musculares, tendinosas y articulares.
+              Diagnóstico preciso para lesiones musculares, tendinosas y articulares. Punciones ecoguiadas para mejorar la precisión y tasa de éxito de las infiltraciones.
             </p>
           </div>
           <div className="panel shadow" style={{ 
@@ -171,9 +171,9 @@ export default function HomePage() {
             padding: "var(--space-8)", 
             border: "1px solid var(--border-light)"
           }}>
-            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Cirugía Ligamento Cruzado</h3>
+            <h3 style={{ color: "var(--accent)", marginBottom: "var(--space-3)" }}>Cirugía Ligamento Cruzado y Meniscal</h3>
             <p style={{ margin: 0, color: "var(--muted)" }}>
-              Cirugía de LCA cuando no es candidato para tratamiento conservador.
+              Cirugía de LCA y meniscal cuando no es candidato para tratamiento conservador.
             </p>
           </div>
         </div>
@@ -236,6 +236,17 @@ export default function HomePage() {
               Evaluación de tratamientos avanzados para casos seleccionados y lesiones deportivas.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section id="tratamiento-conservador" style={{ marginTop: "var(--space-16)" }}>
+        <h2 className="text-gradient" style={{ fontSize: "2rem", marginBottom: "var(--space-8)", textAlign: "center" }}>
+          Tratamiento Conservador
+        </h2>
+        <div className="panel shadow" style={{ padding: "var(--space-12)", textAlign: "center" }}>
+          <p style={{ fontSize: "1.2rem", lineHeight: 1.6, color: "var(--muted)", maxWidth: 800, margin: "0 auto" }}>
+            Para todos los pacientes candidatos a tratamiento conservador, trabajo en estrecho contacto con un centro de fisioterapia deportiva y centro de readaptación de lesiones deportivas, garantizando un enfoque multidisciplinar coordinado para optimizar los resultados.
+          </p>
         </div>
       </section>
 
